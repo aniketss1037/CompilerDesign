@@ -5,13 +5,17 @@ using namespace std;
 
 int main()
 {
-
-    regex reg("a*ba*");
-    if (regex_search("aabaa", reg))
-        cout << "matched" << endl;
+    string input;
+    regex pattern("a*ba*");
+    
+    cout<<"Enter a string : ";
+    cin>>input;
+    
+    if(regex_match(input,pattern))
+    cout<<"matched";
     else
-        cout << "not matched" << endl;
-
-    return 0;
+    cout<<"not matched";
 }
+
+
 
